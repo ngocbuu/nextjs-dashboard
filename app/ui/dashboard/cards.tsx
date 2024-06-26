@@ -13,7 +13,14 @@ const iconMap = {
   invoices: InboxIcon,
 };
 
+import { fetchCardData } from '@/app/lib/data';
+
 export default async function CardWrapper() {
+  const cardData = await fetchCardData()
+  const totalPaidInvoices = cardData.totalPaidInvoices
+  const totalPendingInvoices = cardData.totalPendingInvoices
+  const numberOfInvoices = cardData.numberOfInvoices
+  const numberOfCustomers = cardData.numberOfCustomers
   return (
     <>
       {/* NOTE: comment in this code when you get to this point in the course */}

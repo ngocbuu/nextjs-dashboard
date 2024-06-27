@@ -22,6 +22,14 @@ const links = [
   { name: 'Customers', href: '/dashboard/customers', icon: UserGroupIcon },
 ];
 
+const setting_links = [
+  {
+    name: 'Settings',
+    href: '/dashboard/settings',
+    icon: DocumentDuplicateIcon,
+  }
+]
+
 export default function NavLinks() {
   const pathname = usePathname();
   return (
